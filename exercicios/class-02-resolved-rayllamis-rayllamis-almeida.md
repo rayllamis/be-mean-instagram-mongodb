@@ -2,7 +2,7 @@
 autor: Rayllamis Almeida
 
 ## Listagem das databases (passo 2)
-	```md
+
     > use be-mean-pokemons
 		switched to db be-mean-pokemons
 
@@ -16,16 +16,15 @@ autor: Rayllamis Almeida
 		be-mean-instagram → 0.078GB
 		local             → 0.078GB
 
-	```
 ## Listagem das coleções (passo 3)
-	```md
+
     > show collections
 		pokemons       → 0.001MB / 0.008MB
 		system.indexes → 0.000MB / 0.008MB
 
-	```
 ## Cadastro dos pokemons (passo 4)
-	```md
+
+
     > db.pokemons.insert({name: "Metapod", description: "Metapod é um pokemon tipo inseto, é a forma evoluída de Caterpie e sua próxima próxima evolução é o Butterfree", attack: 20, defense: 100, height: 7})
 		Inserted 1 record(s) in 70ms
 		WriteResult({
@@ -56,10 +55,8 @@ autor: Rayllamis Almeida
 		  "nInserted": 1
 		})
 
-	```
-
 ## Lista dos pokemons (passo 5)
-	```md
+
     > db.pokemons.find()
 		{
 		  "_id": ObjectId("5649201f3f24e66f706f2e1e"),
@@ -102,9 +99,8 @@ autor: Rayllamis Almeida
 		  "height": 3
 		}
 
-	```
 ## Metapod (passo 6)
-	```md
+
     > var query = {"name": "Metapod"}
 		> var poke  = db.pokemons.findOne(query)
 		> poke
@@ -117,9 +113,8 @@ autor: Rayllamis Almeida
 		  "height": 7
 		}
 
-	```
 ## Atualização do Metapod (passo 6)
-	```md
+
     > poke.description = "Pokemon inseto METAFODA!"
 		Pokemon inseto METAFODA!
 		db.pokemons.save(poke)
@@ -129,5 +124,3 @@ autor: Rayllamis Almeida
 		  "nUpserted": 0,
 		  "nModified": 1
 		})
-
-	```
